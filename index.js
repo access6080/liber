@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import  cors from 'cors';
 import dotenv from 'dotenv';
 dotenv.config(); //Initialize enviroment variables
 
@@ -22,6 +23,9 @@ db.on('error', (e) => console.log(e.message));
 
 //Express Middleware
 app.use(express.json());
+app.use(cors({
+    origin: `https://localhost:3000`
+}));
 
 //Linking Custom Routes
 app.use('/api', apiRoute);
