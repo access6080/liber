@@ -6,6 +6,7 @@ dotenv.config(); //Initialize enviroment variables
 
 //Route Imports
 import apiRoute from './routes/api.js';
+import bookRoutes from './routes/books.js'
 
 // Initialize Server
 const app = express();
@@ -29,6 +30,7 @@ app.use(cors({
 
 //Linking Custom Routes
 app.use('/api', apiRoute);
+app.use('/book', bookRoutes);
 
 
 app.listen(PORT, () => {
