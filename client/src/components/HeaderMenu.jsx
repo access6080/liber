@@ -1,10 +1,12 @@
 import React from 'react';
-import { HiViewList } from 'react-icons/hi';
+// import { HiViewList } from 'react-icons/hi';
 
-const HeaderMenu = () => {
+
+const HeaderMenu = ({state, setState}) => {
+
     return (
-        <div className='md:hidden'>
-            <HiViewList className='text-blue-200 h-6'/>
+        <div className={`bg-white w-screen z-10 ${(state === true) ? "" : "hidden"}`}>
+            <h1 onClick={() => setState((prevState) => !prevState)}>Close</h1>
         </div>
     )
 }

@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import { HiViewList } from 'react-icons/hi';
 import HeaderMenu from './HeaderMenu';
+
 
 const Header = () => {
     const [menu, setMenu] = useState("Home")
+    const [toogleMenu, setToogleMenu] = useState(false);
 
     const handleClick = (e) => {
         setMenu(e.target.innerHTML);
     }
 
+    const handleMenu = () => {
+        console.log('Menu Clicked')
+        setToogleMenu((prevState) => !prevState);
+    }
+
     return (
+        <>
         <header className="sticky top-0 z-50 bg-liber-100 flex items-center justify-between p-2 lg:px-5 shadow-md">
 
             {/* Left */}
@@ -17,7 +26,7 @@ const Header = () => {
             </div>
 
             {/* Right */}
-            <div className='flex items-center  justify-end cursor-pointer'>
+            <div className='flex items-center justify-end cursor-pointer'>
                 <div className='space-x-4 sm:space-x-2 hidden md:inline-flex ml-2 items-center'>
                     <div className='flex items-center rounded-full cursor-pointer'>
                         <h1 className={
@@ -51,10 +60,14 @@ const Header = () => {
                             <a href={"#about"}>About</a>
                         </h1>
                     </div>
-                </div> 
-                <HeaderMenu />
+                </div>  
+                <div className='md:hidden z-0'>
+                    <HiViewList onClick={handleMenu} className='text-blue-200 h-6'/>
+                </div>
             </div>
         </header>
+        <HeaderMenu state={toogleMenu} setState={setToogleMenu}/>
+        </>
     )
 }
 
