@@ -12,7 +12,10 @@ import 'swiper/css/virtual';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-const FeaturedList = () => {
+const FeaturedList = ({ featured }) => {
+
+    console.log(featured)
+
     return (
         <div className="flex w-screen h-1/3 justify-center items-center">
             <Swiper
@@ -25,10 +28,10 @@ const FeaturedList = () => {
                 pagination={{ clickable: true }}
                 className='h-full w-11/12 rounded-b-3xl shadow-xl shadow-black'
             >
-                {["bg-red-500", "bg-green-500", "bg-yellow-500", "bg-blue-500"].map((color, index) => {
-                    return (
+                {featured.map((book, index) => {
+                    return(
                         <SwiperSlide key={index} virtualIndex={index}>
-                            <FeaturedBook color={color} index={index} />
+                            <FeaturedBook title={book.title} image={book.image} desc={book.description} />
                         </SwiperSlide>
                     )
                 })}           

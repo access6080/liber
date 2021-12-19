@@ -25,7 +25,7 @@ db.on('error', (e) => console.log(e.message));
 //Express Middleware
 app.use(express.json());
 app.use(cors({
-    origin: `https://localhost:3000`
+    origin: `http://localhost:3000`
 }));
 
 //Linking Custom Routes

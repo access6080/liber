@@ -17,7 +17,7 @@ const getFeaturedBooks = async (req, res) => {
 
         if (!featured) return res.status(404).json({ message: "Featured Books Not Found" });
 
-        res.status(200).json({ success: true, data: featured });
+        res.status(200).send(featured);
     
     } catch (error) {
         console.log(error.message);
