@@ -26,7 +26,7 @@ const FeaturedList = ({ featured }) => {
                 virtual={true}
                 effect="fade"
                 pagination={{ clickable: true }}
-                className='h-full w-11/12 rounded-b-3xl shadow-xl shadow-black'
+                className='h-full w-full lg:w-11/12 lg:rounded-b-3xl shadow-xl shadow-black'
             >
                 {featured.map((book, index) => {
                     return(
