@@ -1,8 +1,10 @@
 import { Router } from "express";
-import { getAllBooks } from '../controllers/books.js';
+import { getAllBooks, getFeaturedBooks } from '../controllers/books.js';
 
 const bookRoutes = Router();
 
 bookRoutes.get('/', getAllBooks);
+
+bookRoutes.get('/featured', getFeaturedBooks);
 
 export default bookRoutes;

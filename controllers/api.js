@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Book from '../models/books.js'
+import Book from '../models/books.js';
 
 const KEYWORDS = ['mystery', 'action', 'fiction', 'thriller']
 

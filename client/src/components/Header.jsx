@@ -65,7 +65,8 @@ const Header = () => {
                     <HiViewList onClick={handleMenu} className='text-blue-200 h-6'/>
                 </div>
             </div>
-        </header>
+            </header>
+            {/* TODO: Implement mobile header */}
         <HeaderMenu state={toogleMenu} setState={setToogleMenu}/>
         </>
     )
