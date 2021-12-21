@@ -8,7 +8,7 @@ const bookSchema = mongoose.Schema({
     },
 
     author: {
-        type: Array,
+        type: String,
         required: true,
     },
 
@@ -18,12 +18,12 @@ const bookSchema = mongoose.Schema({
     },
 
     category: {
-        type: Array,
+        type: String,
         required: true,
     },
 
     images: {
-        type: Object,
+        type: String,
         required: true,
     },
 

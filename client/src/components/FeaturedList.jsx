@@ -31,7 +31,7 @@ const FeaturedList = ({ featured }) => {
                 {featured.map((book, index) => {
                     return(
                         <SwiperSlide key={index} virtualIndex={index}>
-                            <FeaturedBook title={book.title} image={book.image} desc={book.description} />
+                            <FeaturedBook title={book.title} image={book.images} desc={book.description} />
                         </SwiperSlide>
                     )
                 })}           

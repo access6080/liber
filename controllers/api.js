@@ -40,7 +40,7 @@ const getBooksFromGoogle = async (req, res) => {
 const addBooksController = async (req, res) => {
     const { accesstoken } = req.params;
 
-    if (accesstoken !== 6080) return res.status(403).send("Api Key required");
+    if (accesstoken !== "6080") return res.status(403).send("Api Key required");
 
     const book = req.body;
 
