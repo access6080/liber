@@ -15,7 +15,7 @@ const getFeaturedBooks = async (req, res) => {
     try {
         const featured = await Book.find({ "subject": "Featured" })
 
-        if (!featured) return res.status(404).json({ message: "Featured Books Not Found" });
+        if (!featured) return res.status(404).json({ message: "Featured Books Not Found", success: false });
 
         res.status(200).send(featured);
     
@@ -25,7 +25,26 @@ const getFeaturedBooks = async (req, res) => {
 
 }
 
+const getBooksCategory = async (req, res) => {
+    if (!req.query) return;
+    const category = req.query.category;
+
+    try {
+        const books = await Book.find({ "subject": category });
+
+        if (!books) return res.status(404).json({ success: false });
+        // console.log(books.length)
+
+        res.status(200).json(books);
+    } catch (error) {
+        console.log(error.message);
+    }
+
+
+}
+
 export {
     getAllBooks,
-    getFeaturedBooks
+    getFeaturedBooks,
+    getBooksCategory
 }

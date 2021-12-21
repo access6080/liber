@@ -14,7 +14,7 @@ const bookSchema = mongoose.Schema({
 
     description: {
         type: String,
-        // required: true,
+        required: true,
     },
 
     category: {
@@ -27,8 +27,10 @@ const bookSchema = mongoose.Schema({
         required: true,
     },
 
-    subject: {
-        type: String
+    featured: {
+        type: Boolean,
+        default: false,
+        required: true
     }
 });
 
