@@ -66,7 +66,7 @@ const Header = () => {
                 </div>
             </div>
             </header>
-            {/* TODO: Implement mobile header */}
+            {/*TODO: Implement mobile header */}
         <HeaderMenu state={toogleMenu} setState={setToogleMenu}/>
         </>
     )

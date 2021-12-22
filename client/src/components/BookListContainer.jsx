@@ -1,6 +1,8 @@
 import React from 'react'
 import BookList from './BookList';
 import CategoryList from './CategoryList';
+import Footer from './Footer';
+
 
 const BookListContainer = () => {
     return (
@@ -9,7 +11,8 @@ const BookListContainer = () => {
             <BookList category="Science Fiction"/>  
             <BookList category="Mystery"/>  
             <BookList category="Fantasy"/>  
-            <BookList category="Action"/>  
+            <BookList category="Action" />  
+            <Footer /> {/*TODO: Complete Footer */}
         </div>
     )
 }

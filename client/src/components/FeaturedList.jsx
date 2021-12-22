@@ -13,9 +13,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 const FeaturedList = ({ featured }) => {
-
-    console.log(featured)
-
     return (
         <div className="flex w-screen h-1/3 justify-center items-center">
             <Swiper
