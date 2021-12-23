@@ -5,20 +5,20 @@ import HeaderMenu from './HeaderMenu';
 
 const Header = () => {
     const [menu, setMenu] = useState("Home")
-    const [toogleMenu, setToogleMenu] = useState(false);
+    const [toggleMenu, setToggleMenu] = useState(false);
 
     const handleClick = (e) => {
         setMenu(e.target.innerHTML);
     }
 
     const handleMenu = () => {
-        console.log('Menu Clicked')
-        setToogleMenu((prevState) => !prevState);
+        // console.log('Menu Clicked')
+        setToggleMenu((prevState) => !prevState);
     }
 
     return (
         <>
-        <header className="sticky top-0 z-50 bg-liber-100 flex items-center justify-between p-2 lg:px-5 shadow-md">
+        <header className={`sticky top-0 z-50 bg-liber-100 flex items-center justify-between p-2 lg:px-5 shadow-md`}>
 
             {/* Left */}
             <div className='flex items-center ring-2 p-1 ring-blue-300 rounded-full cursor-pointer'>
@@ -67,7 +67,7 @@ const Header = () => {
             </div>
             </header>
             {/*TODO: Implement mobile header */}
-        <HeaderMenu state={toogleMenu} setState={setToogleMenu}/>
+        <HeaderMenu state={toggleMenu} setState={setToggleMenu}/>
         </>
     )
 }
