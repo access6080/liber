@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useContext, Fragment, useRef  } from 'react';
+import ModalContext from '../../context/ModalContext';
+import { Dialog, Transition } from '@headlessui/react';
 
-const AboutUsModal = ({isOpen, setIsOpen}) => {
+
+const AboutUsModal = () => {
+    const { isOpen, setIsOpen } = useContext(ModalContext);
+    const completeButtonRef = useRef(null);
+
     return (
         <>
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog
-                as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
-                onClose={() => setIsOpen(false)}
+                    as="div"
+                    initialFocus={completeButtonRef}
+                    className="fixed inset-0 z-10 overflow-y-auto"
+                    onClose={() => setIsOpen(false)}
                 >
                 <div className="min-h-screen px-4 text-center">
                     <Transition.Child
@@ -43,21 +50,22 @@ const AboutUsModal = ({isOpen, setIsOpen}) => {
                         as="div"
                         className=" flex flex-col justify-center text-lg font-medium leading-6 text-gray-900"
                         >
-                        <h1 className="text-center">{title}</h1>
+                        <h1 className="text-center">About us</h1>
                         <p className="text-sm text-gray-500 text-center">
-                            By {author}
+                            By Geoffery Koranteng
                         </p>
                         </Dialog.Title>
 
                         <div className="mt-2">
                         <p className="text-sm text-gray-500">
-                            {description}
+                            A B C D E
                         </p>
                         </div>
 
                         <div className="flex justify-center mt-4">
                         <button
                             type="button"
+                            ref={completeButtonRef} 
                             className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                             onClick={() => setIsOpen(false)}
                         >

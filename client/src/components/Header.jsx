@@ -1,23 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { HiViewList } from 'react-icons/hi';
 import HeaderMenu from './HeaderMenu';
+import ModalContext from '../context/ModalContext';
 
 
 const Header = () => {
     const [menu, setMenu] = useState("Home")
     const [toggleMenu, setToggleMenu] = useState(false);
+    const { isOpen, setIsOpen } = useContext(ModalContext);
 
     const handleClick = (e) => {
         setMenu(e.target.innerHTML);
-    }
+
+        if (e.target.innerHTML === "About") {
+            setIsOpen(true);
+            setMenu("Home");
+        }
+
+    };
 
     const handleMenu = () => {
-        // console.log('Menu Clicked')
         setToggleMenu((prevState) => !prevState);
-    }
+    };
 
     return (
         <>
+        {/* {(isOpen === false)  && setMenu("Home")}; */}
         <header className={`sticky top-0 z-50 bg-liber-100 flex items-center justify-between p-2 lg:px-5 shadow-md`}>
 
             {/* Left */}

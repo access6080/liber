@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';import BookListContainer from '../components/BookListContainer';
 import FeaturedList from '../components/FeaturedList';
 import Header from '../components/Header';
+import AboutUsModal from '../components/Modals/AboutUsModal';
 
 
 
@@ -22,6 +23,7 @@ const Homepage = () => {
             <Header />
             <FeaturedList featured={featured} />
             <BookListContainer />
+            <AboutUsModal />
         </div>
     )
 }
