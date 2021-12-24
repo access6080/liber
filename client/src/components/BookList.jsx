@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Virtual } from 'swiper';
 
-import Book from './Book'
+import Book from './Book';
+import { baseUrl } from '../api/serverUri';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,7 +14,7 @@ const BookList = ({ category }) => {
 
     useEffect(() => {
         const fetchedCollection = async () => {
-            const response = await axios.get(`http://localhost:3001/book/category?category=${category}`);
+            const response = await axios.get(`${baseUrl}/book/category?category=${category}`);
             setCollection(response.data);
         }
 

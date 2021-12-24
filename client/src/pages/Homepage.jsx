@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';import BookListContainer from '../components/BookListContainer';
+import axios from 'axios';
+
+import BookListContainer from '../components/BookListContainer';
 import FeaturedList from '../components/FeaturedList';
 import Header from '../components/Header';
 import AboutUsModal from '../components/Modals/AboutUsModal';
+import { baseUrl } from '../api/serverUri';
 
 
 
@@ -11,7 +14,7 @@ const Homepage = () => {
 
     useEffect(() => {
         const fetchedFeatured = async () => {
-            const response = await axios.get('http://localhost:3001/book/featured');
+            const response = await axios.get(`${baseUrl}/book/featured`);
             setfeatured(response.data);
         }
 
