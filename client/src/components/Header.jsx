@@ -7,7 +7,7 @@ import ModalContext from '../context/ModalContext';
 const Header = () => {
     const [menu, setMenu] = useState("Home")
     const [toggleMenu, setToggleMenu] = useState(false);
-    const { isOpen, setIsOpen } = useContext(ModalContext);
+    const { setIsOpen } = useContext(ModalContext);
 
     const handleClick = (e) => {
         setMenu(e.target.innerHTML);

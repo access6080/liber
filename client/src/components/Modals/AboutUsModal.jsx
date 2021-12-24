@@ -1,6 +1,10 @@
 import React, { useContext, Fragment, useRef  } from 'react';
-import ModalContext from '../../context/ModalContext';
 import { Dialog, Transition } from '@headlessui/react';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+
+import ModalContext from '../../context/ModalContext';
+import avatar from '../../static/me.jpeg';
+
 
 
 const AboutUsModal = () => {
@@ -45,32 +49,25 @@ const AboutUsModal = () => {
                     leaveFrom="opacity-100 scale-100"
                     leaveTo="opacity-0 scale-95"
                     >
-                    <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                    <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-liber-200 shadow-xl rounded-2xl">
                         <Dialog.Title
-                        as="div"
-                        className=" flex flex-col justify-center text-lg font-medium leading-6 text-gray-900"
+                            as="div"
+                            className="flex flex-col justify-center items-center w-full"
                         >
-                        <h1 className="text-center">About us</h1>
-                        <p className="text-sm text-gray-500 text-center">
-                            By Geoffery Koranteng
-                        </p>
+                            <div
+                                className="flex justify-end text-white w-full"
+                                ref={completeButtonRef} 
+                                onClick={() => setIsOpen(false)}
+                            >
+                                <AiOutlineCloseCircle  className="cursor-pointer"/>
+                            </div>    
+                            <img className="w-24 h-24 md:w-36 md:h-36 rounded-full object-cover" src={avatar} alt='Designer'/>
                         </Dialog.Title>
 
                         <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                            A B C D E
+                        <p className="text-sm text-blue-100 text-center">
+                            The website was designed and developed by Geoffery Koranteng (Jemak).
                         </p>
-                        </div>
-
-                        <div className="flex justify-center mt-4">
-                        <button
-                            type="button"
-                            ref={completeButtonRef} 
-                            className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Done
-                        </button>
                         </div>
                     </div>
                     </Transition.Child>

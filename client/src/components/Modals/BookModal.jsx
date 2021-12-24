@@ -42,19 +42,19 @@ const BookModal = ({ isOpen, setIsOpen, title, image, description, author }) => 
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-liber-200 shadow-xl rounded-2xl">
                 <Dialog.Title
                   as="div"
-                  className=" flex flex-col justify-center text-lg font-medium leading-6 text-gray-900"
+                  className=" flex flex-col justify-center text-lg font-medium leading-6 text-blue-300"
                 >
                   <h1 className="text-center">{title}</h1>
-                  <p className="text-sm text-gray-500 text-center">
+                  <p className="text-sm text-blue-100 text-center">
                     By {author}
                   </p>
                 </Dialog.Title>
 
                 <div className="mt-2">
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-blue-100">
                     {description}
                   </p>
                 </div>
