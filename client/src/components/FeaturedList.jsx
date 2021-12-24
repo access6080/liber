@@ -14,7 +14,7 @@ import 'swiper/css/effect-fade';
 
 const FeaturedList = ({ featured }) => {
     return (
-        <div className="flex w-screen h-1/3 justify-center items-center">
+        <div id="featured" className="flex w-screen h-1/3 justify-center items-center">
             <Swiper
                 modules={[Pagination, Virtual, Autoplay, EffectFade]}
                 spaceBetween={0}

@@ -36,7 +36,7 @@ const BookList = ({ category }) => {
                 {collection.map((book, index) => {
                     return(
                         <SwiperSlide key={index} virtualIndex={index}>
-                            <Book title={book.title} image={book.images} />
+                            <Book title={book.title} image={book.images} description={book.description} author={book.author}/>
                         </SwiperSlide>
                     )
                 })}           

@@ -57,7 +57,7 @@ const Header = () => {
                             `text-blue-200 font-serif italic ${(menu === 'About') && 'underline underline-offset-4'}` 
                         }
                             onClick={handleClick}>
-                            <a href={"#about"}>About</a>
+                            About
                         </h1>
                     </div>
                 </div>  
