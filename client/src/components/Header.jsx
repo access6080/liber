@@ -30,7 +30,7 @@ const Header = () => {
 
             {/* Left */}
             <div className='flex items-center ring-2 p-1 ring-blue-300 rounded-full cursor-pointer'>
-                <h1 className="text-blue-200 font-serif italic">Liber</h1>
+                <h1 className="text-blue-200  italic">Liber</h1>
             </div>
 
             {/* Right */}
@@ -38,7 +38,7 @@ const Header = () => {
                 <div className='space-x-4 sm:space-x-2 hidden md:inline-flex ml-2 items-center'>
                     <div className='flex items-center rounded-full cursor-pointer'>
                         <h1 className={
-                            `text-blue-200 font-serif italic ${(menu === 'Home') && 'underline underline-offset-4'}` 
+                            `text-blue-200  ${(menu === 'Home') && 'underline underline-offset-4'}` 
                         }
                             onClick={handleClick}>
                             <a href="#home">Home</a>
@@ -46,7 +46,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center rounded-full cursor-pointer'>
                         <h1 className={
-                            `text-blue-200 font-serif italic ${(menu === 'Featured') && 'underline underline-offset-4'}` 
+                            `text-blue-200 ${(menu === 'Featured') && 'underline underline-offset-4'}` 
                         }
                             onClick={handleClick}>
                             <a href={"#featured"}>Featured</a>
@@ -54,7 +54,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center rounded-full cursor-pointer'>
                         <h1 className={
-                            `text-blue-200 font-serif italic ${(menu === 'Categories') && 'underline underline-offset-4'}` 
+                            `text-blue-200 ${(menu === 'Categories') && 'underline underline-offset-4'}` 
                         }
                             onClick={handleClick}>
                             <a href={"#categories"}>Categories</a>
@@ -62,7 +62,7 @@ const Header = () => {
                     </div>
                     <div className='flex items-center rounded-full cursor-pointer'>
                         <h1 className={
-                            `text-blue-200 font-serif italic ${(menu === 'About') && 'underline underline-offset-4'}` 
+                            `text-blue-200 ${(menu === 'About') && 'underline underline-offset-4'}` 
                         }
                             onClick={handleClick}>
                             About
