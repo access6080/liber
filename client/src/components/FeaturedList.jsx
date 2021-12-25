@@ -19,7 +19,10 @@ const FeaturedList = ({ featured }) => {
                 modules={[Pagination, Virtual, Autoplay, EffectFade]}
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{delay: 3000}}
+                autoplay={{
+                    delay: 2000,
+                    pauseOnMouseEnter: true,
+                }}
                 virtual={true}
                 effect="fade"
                 pagination={{ clickable: true }}
