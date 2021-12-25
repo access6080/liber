@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon  index.js"
+    "clean-up": "cd client && rm -r build",
+    "heroku-postbuild": " cd client && npm run build && cd ..",
+    "dev": " cd client && npm run build && cd .. && nodemon index.js"
   },
   "repository": {
     "type": "git",
