@@ -17,7 +17,7 @@ import bookRoutes from './routes/books.js'
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static(join(__dirname, 'client', 'build')));
+app.use(express.static(join(__dirname, 'build')));
 
 // Initialize Database
 mongoose.connect(process.env.CONNECTION_URI, {
@@ -40,7 +40,7 @@ app.use('/api', apiRoute);
 app.use('/book', bookRoutes);
 
 app.get('/', (req, res) => {
-    res.sendFile(join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(join(__dirname, 'build', 'index.html'));
 });
 
 
