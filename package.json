@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "clean-up": "rm -r build",
-    "prepare":"cd client && npm run build && cd .. && mv ./client/build ./",
+    "devPrepare":"cd client && npm run build && cd .. && mv ./client/build ./",
     "dev": " cd client && npm run build && cd .. && nodemon index.js"
   },
   "repository": {
