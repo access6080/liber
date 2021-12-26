@@ -28,7 +28,7 @@ const BookList = ({ category }) => {
             <Swiper
                 modules={[Navigation, Virtual]}
                 spaceBetween={5}
-                slidesPerView={5}
+                slidesPerView={7}
                 virtual={true}
                 pagination
                 navigation
