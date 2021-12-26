@@ -20,8 +20,8 @@ const FeaturedList = ({ featured }) => {
                 spaceBetween={0}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 2000,
-                    pauseOnMouseEnter: true,
+                    "delay": 2000,
+                    "disableOnInteraction": false
                 }}
                 virtual={true}
                 effect="fade"
