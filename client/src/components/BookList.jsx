@@ -11,8 +11,10 @@ import 'swiper/css/navigation';
 
 const BookList = ({ category }) => {
     const [collection, setCollection] = useState([]);
+    const [screenSize, setScreenSize] = useState();
 
     useEffect(() => {
+        setScreenSize(window.screen.width);
         const fetchedCollection = async () => {
             const response = await axios.get(`${baseUrl}/book/category?category=${category}`);
             setCollection(response.data);
@@ -28,7 +30,7 @@ const BookList = ({ category }) => {
             <Swiper
                 modules={[Navigation, Virtual]}
                 spaceBetween={5}
-                slidesPerView={7}
+                slidesPerView={(screenSize < 640 ) ? 5 : 7}
                 virtual={true}
                 pagination
                 navigation

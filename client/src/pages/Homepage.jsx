@@ -18,13 +18,14 @@ const Homepage = () => {
             setfeatured(response.data);
         }
 
+
         return fetchedFeatured();
     }, []);
 
     return (
         <div className="flex flex-col bg-liber-200 overflow-auto w-screen h-full">
             <Header />
-            <FeaturedList featured={featured} />
+            <FeaturedList featured={featured}/>
             <BookListContainer />
             <AboutUsModal />
         </div>
